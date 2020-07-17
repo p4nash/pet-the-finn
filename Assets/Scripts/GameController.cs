@@ -94,9 +94,6 @@ public class GameController : MonoBehaviour
             return; 
         }
 
-        ACOGFlash.SetActive(false);
-        WeaponFlash.SetActive(false);
-
         if (Input.GetMouseButtonDown(1))
         {
             soundEffectsSource.PlayOneShot(shuffle);
@@ -144,10 +141,16 @@ public class GameController : MonoBehaviour
             if (isADSed)
             {
                 ACOGFlash.SetActive(true);
+                StartCoroutine(Helper.WaitFor(0.5f, () =>{
+                    ACOGFlash.SetActive(false);
+                }));
             }
             else
             {
                 WeaponFlash.SetActive(true);
+                StartCoroutine(Helper.WaitFor(0.5f, () => {
+                    WeaponFlash.SetActive(false);
+                }));
             }
             RaycastHit2D[] hits = Physics2D.RaycastAll(camera.transform.position, camera.transform.forward);
             foreach (RaycastHit2D hit in hits)

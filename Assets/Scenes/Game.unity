@@ -758,7 +758,7 @@ Transform:
   m_GameObject: {fileID: 418048249}
   m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: -32, y: -7.9, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 28.115002, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -799,7 +799,7 @@ MonoBehaviour:
   collUp: 0
   collDown: 0
   aimCollider: {fileID: 498631762}
-  sens: 40
+  sens: 30
   leftmax: 15.7
   rightmax: 22.5
   upmax: 2
@@ -2494,7 +2494,7 @@ Transform:
   m_GameObject: {fileID: 1155956149}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -7.9, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 10, y: 10, z: 34.569}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -2615,7 +2615,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 29.7, y: 105.93}
+  m_AnchoredPosition: {x: 29.699951, y: 105.92999}
   m_SizeDelta: {x: 23.90033, y: 160.2841}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1239649638
@@ -3660,7 +3660,7 @@ MonoBehaviour:
   collUp: 0
   collDown: 0
   aimCollider: {fileID: 1839242033}
-  sens: 20
+  sens: 10
   leftmax: 18
   rightmax: 20
   upmax: 0.8

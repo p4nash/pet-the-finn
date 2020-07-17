@@ -8,8 +8,6 @@ public class SubScript : MonoBehaviour
 
     public GameObject lights;
 
-    delegate void FunctionExecute();
-
     float timer, subtime;
 
     bool subInProgress = false;
@@ -18,7 +16,7 @@ public class SubScript : MonoBehaviour
     void Start()
     {
         timer = 0;
-        subtime = 10;
+        subtime = 20;
         audioSource = gameObject.GetComponent<AudioSource>();
     }
 
@@ -27,7 +25,7 @@ public class SubScript : MonoBehaviour
         subInProgress = true;
         audioSource.Play();
         lights.SetActive(true);
-        StartCoroutine(WaitFor(14, () => { subInProgress = false; lights.SetActive(false); }));
+        StartCoroutine(Helper.WaitFor(14, () => { subInProgress = false; lights.SetActive(false); }));
     }
 
     // Update is called once per frame
@@ -42,13 +40,4 @@ public class SubScript : MonoBehaviour
         }
     }
 
-    IEnumerator WaitFor(float timer, FunctionExecute func)
-    {
-        while (timer > 0)
-        {
-            timer--;
-            yield return new WaitForSeconds(1);
-        }
-        func();
-    }
 }

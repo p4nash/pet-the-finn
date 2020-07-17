@@ -102,7 +102,7 @@ MonoBehaviour:
   originalPosition: {x: 0, y: 0, z: 0}
   maxMovement: 0.5
   type: 0
-  speed: 0.01
+  speed: 1
   Active: 0
   manOof: {fileID: 8300000, guid: 791c5cf458abe804cba1d17855d4ba3e, type: 3}
   footsteps: {fileID: 0}

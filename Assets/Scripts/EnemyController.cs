@@ -50,7 +50,7 @@ public class EnemyController : MonoBehaviour
 
             if (transform.position.x < rightMax.x && !turnAround)
             {
-                transform.position += new Vector3(1, 0, 0) * speed;
+                transform.position += new Vector3(1, 0, 0) * speed * Time.deltaTime;
             }
             else if(transform.position.x >= rightMax.x && !turnAround)
             {
@@ -58,7 +58,7 @@ public class EnemyController : MonoBehaviour
             }
             else if (turnAround && transform.position.x > originalPosition.x)
             {
-                transform.position += new Vector3(-1, 0, 0) * speed;
+                transform.position += new Vector3(-1, 0, 0) * speed * Time.deltaTime;
             }
             else if (turnAround && transform.position.x <= originalPosition.x)
             {
@@ -73,7 +73,7 @@ public class EnemyController : MonoBehaviour
 
             if (transform.position.x > leftMax.x && !turnAround)
             {
-                transform.position += new Vector3(-1, 0, 0) * speed;
+                transform.position += new Vector3(-1, 0, 0) * speed * Time.deltaTime;
             }
             else if (transform.position.x <= leftMax.x && !turnAround)
             {
@@ -81,7 +81,7 @@ public class EnemyController : MonoBehaviour
             }
             else if (turnAround && transform.position.x < originalPosition.x)
             {
-                transform.position += new Vector3(1, 0, 0) * speed;
+                transform.position += new Vector3(1, 0, 0) * speed * Time.deltaTime;
             }
             else if(turnAround && transform.position.x >= originalPosition.x)
             {
