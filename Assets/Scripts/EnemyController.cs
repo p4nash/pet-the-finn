@@ -17,28 +17,38 @@ public class EnemyController : MonoBehaviour
 
     public bool Active;
 
+    public AudioClip manOof, footsteps;
+    AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
         leftMax = transform.position - new Vector3(maxMovement, 0, 0);
         rightMax = transform.position + new Vector3(maxMovement, 0, 0);
+        audioSource = gameObject.GetComponent<AudioSource>();
         turnAround = false;
     }
 
-    private void Awake()
+    public void DestroyEnemy()
     {
-        //originalPosition = this.transform.position;
-        //Debug.Log("Original position is " + originalPosition);
+        if (!Active) return;
+        Active = false;
+        audioSource.PlayOneShot(manOof);
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        Destroy(this.gameObject, 0.5f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!Active) return;
+        if (!Active || GameController.Instance.hasGameEnded) return;
 
         if(type == "left")
         {
-            if(transform.position.x < rightMax.x && !turnAround)
+            audioSource.panStereo = -1;
+            audioSource.PlayOneShot(footsteps);
+
+            if (transform.position.x < rightMax.x && !turnAround)
             {
                 transform.position += new Vector3(1, 0, 0) * speed;
             }
@@ -52,11 +62,15 @@ public class EnemyController : MonoBehaviour
             }
             else if (turnAround && transform.position.x <= originalPosition.x)
             {
+                GameController.Instance.DoDamage();
                 Destroy(this.gameObject);
             }
         }
         else if (type == "right")
         {
+            audioSource.panStereo = 1;
+            audioSource.PlayOneShot(footsteps);
+
             if (transform.position.x > leftMax.x && !turnAround)
             {
                 transform.position += new Vector3(-1, 0, 0) * speed;
@@ -71,6 +85,7 @@ public class EnemyController : MonoBehaviour
             }
             else if(turnAround && transform.position.x >= originalPosition.x)
             {
+                GameController.Instance.DoDamage();
                 Destroy(this.gameObject);
             }
         }
