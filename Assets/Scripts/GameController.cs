@@ -141,14 +141,14 @@ public class GameController : MonoBehaviour
             if (isADSed)
             {
                 ACOGFlash.SetActive(true);
-                StartCoroutine(Helper.WaitFor(0.5f, () =>{
+                StartCoroutine(Helper.WaitForFrame(3, () =>{
                     ACOGFlash.SetActive(false);
                 }));
             }
             else
             {
                 WeaponFlash.SetActive(true);
-                StartCoroutine(Helper.WaitFor(0.5f, () => {
+                StartCoroutine(Helper.WaitForFrame(3, () => {
                     WeaponFlash.SetActive(false);
                 }));
             }
@@ -216,8 +216,8 @@ public class GameController : MonoBehaviour
         if (isFinnSpawned) return;
 
         soundEffectsSource.PlayOneShot(meow);
-        ADS.GetComponent<AimScript>().sens = 20f;
-        weapon.GetComponent<AimScript>().sens = 10f;
+        ADS.GetComponent<AimScript>().sens = 10f;
+        weapon.GetComponent<AimScript>().sens = 5f;
 
         finnStuff.SetActive(true);
         FinnHappy.SetActive(true);

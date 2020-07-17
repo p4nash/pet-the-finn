@@ -14,15 +14,14 @@ public class Helper : MonoBehaviour
         }
         func();
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public static IEnumerator WaitForFrame(int frames, FunctionExecute func)
     {
-        
+        while(frames > 0)
+        {
+            frames--;
+            yield return new WaitForEndOfFrame();
+        }
+        func();
     }
 }
