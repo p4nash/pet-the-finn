@@ -233,8 +233,8 @@ public class GameController : MonoBehaviour
 
     void FinnPetSuccessfully()
     {
-        ADS.GetComponent<AimScript>().sens = 25f;
-        weapon.GetComponent<AimScript>().sens = 15f;
+        ADS.GetComponent<AimScript>().sens = 20f;
+        weapon.GetComponent<AimScript>().sens = 10f;
 
         finnStuff.SetActive(false);
         FinnHappy.SetActive(false);
