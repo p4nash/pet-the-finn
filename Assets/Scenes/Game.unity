@@ -877,7 +877,7 @@ MonoBehaviour:
   collUp: 0
   collDown: 0
   aimCollider: {fileID: 498631762}
-  sens: 20
+  sens: 25
   leftmax: 15.7
   rightmax: 22.5
   upmax: 2
@@ -1698,7 +1698,7 @@ MonoBehaviour:
   scoreText: {fileID: 1492876433}
   soundEffectsSource: {fileID: 2067392552}
   gunShot: {fileID: 8300000, guid: daa9b17a548cc4e469099d1572e50a5a, type: 3}
-  meow: {fileID: 8300000, guid: d1daa98b84fbb05448471c868d79a44f, type: 3}
+  meow: {fileID: 8300000, guid: be4e0f9fd49815e4b911c8fe444f8c19, type: 3}
   oof: {fileID: 8300000, guid: ca17552604ebc6a4190db40a483aac5e, type: 3}
   manOof: {fileID: 8300000, guid: 791c5cf458abe804cba1d17855d4ba3e, type: 3}
   shuffle: {fileID: 8300000, guid: 38581b14cd4faf941b4ef9663af30911, type: 3}
@@ -3739,7 +3739,7 @@ MonoBehaviour:
   collUp: 0
   collDown: 0
   aimCollider: {fileID: 1839242033}
-  sens: 10
+  sens: 15
   leftmax: 18
   rightmax: 20
   upmax: 0.8
