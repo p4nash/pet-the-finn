@@ -3,13 +3,75 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Pet the Finn</title>
+    <title>Pet the Finn</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
     <script src="Build/UnityLoader.js"></script>
     <script>
       UnityLoader.instantiate("unityContainer", "Build/Pet The Finn - Web Build.json");
     </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="scripts/script.js"></script>
+    <link rel="stylesheet" href="styles/master.css">
   </head>
   <body>
-    <div id="unityContainer" style="width: 1280px; height: 720px; margin: auto"></div>
+    <div id="gameContainer">
+      <div id="unityContainer" class="centerdiv"></div>
+      <img id="scrollImage" src="https://img.icons8.com/material-outlined/24/ffffff/circled-down-2.png"/>
+    </div>
+    <div id='description' class='centerdiv'>
+    <!-- <h1>Pet the Finn</h1> -->
+    <div class='title'>
+      <img src="images/Title.png" class='centerdiv' alt="">
+    </div>
+
+    <div class='container'>
+      <div class='row'>
+      
+      <div class='col-lg-5 col-md-12'>
+        <img src="images/Finn Happy.png" id='Finn' alt="">
+      </div>
+      <div class='col-lg-7 col-md-12' id="descText">
+  
+        <p>
+          Another day, another game of Siege. Defend yourself from the endless array of enemies that pop up left and right. Don't let your health bar get to 0!
+        </p>
+  
+        <p>
+          But what's that?! Finn demands pets!
+        </p>
+  
+        <p>
+          And o no! Someone just subbed! Let's hope the alert sound plays for everybody.
+        </p>
+  
+        <h3>Features</h3>
+  
+        <p>
+          <ul>
+            <li>
+              In good ol' fashioned Siege manner, the hitboxes on this are broken as well and I refuse to fix them.
+            </li>
+            <li>
+              When Finn spawns, it lowers your sensitivity cause he's build like a tater tot and is sitting on your lap.
+            </li>
+            <li>
+              The more you play, the more demanding Finn gets.
+            </li>
+            <li>
+              After every 4 enemies you kill, you regenerate some health.
+            </li>
+          </ul>
+        </p>
+      </div>
+      </div>
+    </div>
+      <div id='footer'> 
+        <h3>Licensing</h3>
+        <p>All audio is taken from <a href="freesound.org">FreeSound.org</a></p>
+        <p>Music taken from the YouTube library.</p>
+        <p><a href="https://github.com/p4nash/pet-the-finn">Source code</a></p>
+      </div>
+    </div>
   </body>
 </html>
